@@ -1,0 +1,4 @@
+cd /etc/pve
+rm pve-root-ca.pem priv/pve-root-ca.key nodes/*/pve-ssl.{key,pem}
+pvecm updatecerts --force
+systemctl restart pveproxy
